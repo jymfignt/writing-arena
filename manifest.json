@@ -1,0 +1,9 @@
+{
+  "id": "writing-arena",
+  "name": "创作工坊（脑洞库 + 论文热身）",
+  "version": "0.1.0",
+  "minAppVersion": "1.7.0",
+  "description": "两套隔离流程：同人脑洞库存管理（存档/列表/思路/大纲/正文）与可选的论文研读热身笔记；论文内容不与同人设定联动。",
+  "author": "jymfignt",
+  "isDesktopOnly": false
+}
