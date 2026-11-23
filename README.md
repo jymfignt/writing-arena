@@ -37,7 +37,7 @@ writing-arena/
 ├─ versions.json
 ├─ styles.css
 ├─ version-bump.mjs
-├─ screenshots/          # 上架用界面截图（自行补充）
+├─ screenshots/          # 上架用界面截图（**todo**）
 └─ src/
    ├─ main.ts             # 插件入口、命令注册、设置页
    ├─ settings.ts         # 默认设置
@@ -51,48 +51,6 @@ writing-arena/
       ├─ IdeaModal.ts     # 新建 / 编辑脑洞弹窗
       └─ IdeaListView.ts  # 脑洞库侧边栏
 ```
-
-## 本地开发与构建
-
-前置：Node.js 18+（开发时使用 v22）。
-
-```bash
-npm install
-npm run dev      # 监听模式，改动后自动重新打包 main.js
-npm run build    # 生产构建，输出 main.js
-```
-
-### 在自己的 vault 里试用
-
-1. 把整个项目文件夹复制到 vault 的 `.obsidian/plugins/writing-arena/` 下；
-2. 在该目录执行 `npm install && npm run build`，确认生成 `main.js`；
-3. Obsidian → 设置 → 第三方插件，关闭安全模式后启用「创作工坊」；
-4. 左侧功能区铅笔图标或命令面板（Ctrl/Cmd+P）调用命令。
-
-## 发布到 GitHub
-
-1. 新建仓库并 push 源码（`node_modules/`、`main.js` 已在 `.gitignore` 中忽略）；
-2. 发 Release 前先 `npm run build`；
-3. 在 Release 附件中上传三个构建产物：
-   - `main.js`
-   - `manifest.json`
-   - `styles.css`
-4. 安装方式二选一：
-   - **BRAT 插件**：添加仓库链接，自动拉取 Release 产物；
-   - **手动安装**：把上述三个文件放入 vault 的 `.obsidian/plugins/writing-arena/`，重启后启用。
-
-> 注意：只 push 源码仓库不会被 Obsidian 识别为可安装插件，必须在 Release 附带构建产物。
-
-## 提交到官方社区市场
-
-上架免费，Obsidian 不收上架费、不抽成，也不提供内置支付通道。提交前确认：
-
-- 仓库根目录有 `README.md` 和 `LICENSE`（本项目采用 MIT）；
-- README 已说明网络用途：LLM 接口请求、在线音频链接属于网络访问；
-- 插件 ID 不含 `obsidian` 字样；不带客户端遥测、代码不混淆；
-- 在 Obsidian 社区网站的开发者面板连接 GitHub 仓库提交，自动审核通过后即可被搜索下载。
-
-变现：市场本身不收费，Free 插件可以在 README 放赞助链接（GitHub Sponsors / Ko-fi / PayPal）；若有付费功能或连接付费服务，需在面板标注 Optional payments 或 Paid。
 
 ## 设置项
 
